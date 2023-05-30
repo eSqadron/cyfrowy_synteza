@@ -1,4 +1,4 @@
-#N canvas -8 -8 1936 1040 10;
+#N canvas 0 0 1366 689 10;
 #X obj 102 -470 *~ 0;
 #X obj 172 -480 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
@@ -11,17 +11,17 @@
 #X obj 102 -620 noise~;
 #X obj 333 -275 *~ 0;
 #X obj 401 -299 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 333 -315 *~ 0;
 #X obj 438 -426 vsl 15 101 0 1 0 0 empty empty volume 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 3701 1;
 #X obj 499 -94 +~;
 #X obj 835 -213 *~ 0;
 #X obj 899 -236 tgl 14 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 831 -255 *~ 0;
 #X obj 1053 -365 vsl 15 101 0 1 0 0 empty empty volume 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 3701 1;
 #X obj 523 -676 notein;
 #X obj 240 -396 phasor~ 440;
 #X obj 828 -331 expr~ $v1 > 0.5;
@@ -132,11 +132,11 @@ snapshot - bedzie regularnie printowane, f 25;
 #X obj 830 -291 lop~;
 #X obj 379 -389 *;
 #X obj 976 -476 vsl 20 101 1 16 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 10000 1;
 #X obj 953 -368 *;
 #X floatatom 134 -583 9 0 0 0 - - -, f 9;
 #X floatatom 173 -522 5 0 0 0 - - -, f 5;
-#X floatatom 1099 -632 5 0 1 0 - - -, f 5;
+#X floatatom 1098 -593 5 0 1 0 - - -, f 5;
 #X floatatom 1090 -148 5 0 0 0 - - -, f 5;
 #X obj 486 165 *~;
 #X floatatom 70 -80 4 0 1 0 - - -, f 4;
@@ -309,13 +309,13 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 41 0 5 0;
 #X restore 658 -273 pd vibrato;
 #X obj 740 -532 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 8400 1;
+#000000 #000000 0 1;
 #X obj 538 -559 vsl 15 128 0 30 0 1 empty empty vib\ F 0 -9 0 10 #fcfcfc
-#000000 #000000 33 1;
+#000000 #000000 0 1;
 #X obj 607 -530 vradio 15 0 0 3 empty empty vib\ off/lin/log 0 -8 0
 10 #fcfcfc #000000 #000000 0;
 #X obj 613 -69 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 8400 1;
+#000000 #000000 12700 1;
 #X obj 581 49 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 0.503937;
 #N canvas 476 336 780 701 tremollo 0;
@@ -381,7 +381,7 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 29 0 19 0;
 #X connect 30 0 0 0;
 #X restore 570 77 pd tremollo;
-#N canvas 355 95 924 701 vibrato 0;
+#N canvas -8 -8 1366 715 vibrato 0;
 #X obj 175 292 osc~;
 #X floatatom 246 215 5 0 1 0 - - -, f 5;
 #X obj 275 362 +~;
@@ -480,14 +480,14 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 47 0 5 0;
 #X restore 473 -249 pd vibrato;
 #X obj 470 -567 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 8400 1;
+#000000 #000000 12700 1;
 #X obj 482 81 *~;
 #X obj 815 -447 *~;
 #X obj 851 -411 snapshot~;
 #X obj 332 -444 *~;
 #X obj 332 -419 snapshot~;
 #X obj 679 -772 ctlin;
-#N canvas 1328 301 542 544 control 0;
+#N canvas 319 8 526 561 control 0;
 #X floatatom 65 139 5 0 1 0 - - -, f 5;
 #X floatatom 165 141 5 0 0 0 - - -, f 5;
 #X obj 58 75 inlet;
@@ -512,6 +512,19 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 13 1 5 0;
 #X connect 13 7 6 0;
 #X restore 669 -691 pd control;
+#X obj 1098 -626 / 127;
+#X obj 1069 103 snapshot~;
+#X obj 1103 76 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1126 23 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 1127 43 metro 100;
+#X obj 1079 149 print 2;
+#X obj 1005 -6 print 3;
+#X obj 869 -452 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
+#X obj 231 -447 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
+#000000 #000000;
 #X connect 0 0 58 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 0;
@@ -529,7 +542,7 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 14 0 12 0;
 #X connect 15 0 14 1;
 #X connect 16 0 30 0;
-#X connect 16 1 49 0;
+#X connect 16 1 76 0;
 #X connect 17 0 41 0;
 #X connect 18 0 43 0;
 #X connect 19 0 18 0;
@@ -547,7 +560,9 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 30 0 24 0;
 #X connect 31 0 33 0;
 #X connect 32 0 70 0;
+#X connect 32 0 83 0;
 #X connect 33 0 72 0;
+#X connect 33 0 84 0;
 #X connect 35 0 36 0;
 #X connect 35 0 52 0;
 #X connect 36 0 51 1;
@@ -590,8 +605,19 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 70 0 19 0;
 #X connect 70 0 71 0;
 #X connect 71 0 46 0;
+#X connect 71 0 82 0;
 #X connect 72 0 17 0;
 #X connect 72 0 73 0;
 #X connect 73 0 44 0;
 #X connect 74 0 75 0;
 #X connect 74 1 75 1;
+#X connect 75 0 10 0;
+#X connect 75 0 15 0;
+#X connect 75 1 61 0;
+#X connect 75 1 68 0;
+#X connect 76 0 49 0;
+#X connect 78 0 77 0;
+#X connect 79 0 80 0;
+#X connect 80 0 78 0;
+#X connect 83 0 71 0;
+#X connect 84 0 73 0;
