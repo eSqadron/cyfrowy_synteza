@@ -1,0 +1,67 @@
+#N canvas -8 -8 1382 698 10;
+#X obj 453 624 dac~;
+#X obj 648 535 tgl 17 0 empty empty on/off 17 7 0 10 #fcfcfc #000000
+#000000 1 1;
+#X obj 341 92 notein;
+#N canvas 319 8 526 561 control 0;
+#X floatatom 65 139 5 0 1 0 - - -, f 5;
+#X floatatom 165 141 5 0 0 0 - - -, f 5;
+#X obj 58 75 inlet;
+#X obj 165 75 inlet;
+#X obj 66 165 / 127;
+#X floatatom 82 291 5 0 0 0 - - -, f 5;
+#X floatatom 183 295 5 0 0 0 - - -, f 5;
+#X obj 210 369 outlet;
+#X obj 21 367 outlet;
+#X text 25 390 volume;
+#X text 203 392 modulation;
+#X text 50 49 value;
+#X text 161 54 channel;
+#X obj 65 245 demux 0 1 2 3 4 5 6 7 8 9;
+#X connect 0 0 4 0;
+#X connect 1 0 13 1;
+#X connect 2 0 0 0;
+#X connect 3 0 1 0;
+#X connect 4 0 13 0;
+#X connect 5 0 7 0;
+#X connect 6 0 8 0;
+#X connect 13 1 5 0;
+#X connect 13 7 6 0;
+#X restore 402 92 pd control;
+#X obj 410 54 ctlin;
+#X obj 562 341 hsl 128 15 0 1 0 1 empty empty Sutain -2 -8 0 10 #fcfcfc
+#000000 #000000 12700 1;
+#X obj 588 372 hsl 128 15 10 2000 0 1 empty empty Attack -2 -8 0 10
+#fcfcfc #000000 #000000 5400 1;
+#X obj 614 407 hsl 128 15 10 2000 0 1 empty empty Decay -2 -8 0 10
+#fcfcfc #000000 #000000 2300 1;
+#X obj 641 442 hsl 128 15 10 2000 0 1 empty empty Release -2 -8 0 10
+#fcfcfc #000000 #000000 2700 1;
+#X obj 507 85 hsl 128 15 0 1 0 1 empty empty Sutain -2 -8 0 10 #fcfcfc
+#000000 #000000 5700 1;
+#X obj 520 112 hsl 128 15 10 2000 0 1 empty empty Attack -2 -8 0 10
+#fcfcfc #000000 #000000 3600 1;
+#X obj 534 139 hsl 128 15 10 2000 0 1 empty empty Decay -2 -8 0 10
+#fcfcfc #000000 #000000 3300 1;
+#X obj 550 164 hsl 128 15 10 2000 0 1 empty empty Release -2 -8 0 10
+#fcfcfc #000000 #000000 2600 1;
+#X obj 460 566 FM_gen;
+#X text 551 41 I;
+#X text 618 303 Amplituda;
+#X connect 1 0 13 12;
+#X connect 2 0 13 0;
+#X connect 2 1 13 1;
+#X connect 3 0 13 2;
+#X connect 3 1 13 3;
+#X connect 4 0 3 0;
+#X connect 4 1 3 1;
+#X connect 5 0 13 8;
+#X connect 6 0 13 9;
+#X connect 7 0 13 10;
+#X connect 8 0 13 11;
+#X connect 9 0 13 4;
+#X connect 10 0 13 5;
+#X connect 11 0 13 6;
+#X connect 12 0 13 7;
+#X connect 13 0 0 0;
+#X connect 13 0 0 1;

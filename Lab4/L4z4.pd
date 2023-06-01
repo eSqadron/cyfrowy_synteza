@@ -1,4 +1,4 @@
-#N canvas 0 0 1920 1024 10;
+#N canvas 0 0 1366 682 10;
 #X obj 75 -164 *~ 0;
 #X obj 145 -174 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 1 1;
@@ -10,7 +10,7 @@
 #000000 0 1;
 #X obj 264 -301 *~ 0;
 #X obj 452 -418 vsl 15 101 0 1 0 0 empty empty volume 0 -9 0 10 #fcfcfc
-#000000 #000000 10000 1;
+#000000 #000000 0 1;
 #X obj 499 -94 +~;
 #X obj 967 -208 *~ 0;
 #X obj 918 -238 tgl 14 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -20,14 +20,14 @@
 #000000 #000000 0 1;
 #X obj 511 -827 notein;
 #X obj 311 -669 vsl 15 101 -12 12 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 5000 1;
+#000000 #000000 0 1;
 #X floatatom 311 -549 5 0 0 0 - - -, f 5;
 #X obj 251 -709 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 251 -679 0;
 #X obj 331 -519 +;
 #X obj 959 -659 vsl 15 101 -12 12 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 5000 1;
+#000000 #000000 0 1;
 #X floatatom 961 -547 5 0 0 0 - - -, f 5;
 #X obj 1019 -689 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -295,11 +295,11 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 41 0 5 0;
 #X restore 658 -545 pd vibrato;
 #X obj 744 -715 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 12700 1;
+#000000 #000000 2600 1;
 #X obj 607 -702 vsl 15 128 0 30 0 1 empty empty vib\ F 0 -9 0 10 #fcfcfc
 #000000 #000000 9900 1;
 #X obj 630 -664 vradio 15 0 0 3 empty empty vib\ off/lin/log 0 -8 0
-10 #fcfcfc #000000 #000000 1;
+10 #fcfcfc #000000 #000000 0;
 #X obj 613 -69 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
 #000000 #000000 12700 1;
 #X obj 581 49 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
@@ -466,7 +466,7 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 47 0 5 0;
 #X restore 547 -534 pd vibrato;
 #X obj 534 -701 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 12700 1;
+#000000 #000000 2600 1;
 #X obj 482 81 *~;
 #X obj 675 -826 ctlin;
 #N canvas 319 8 526 561 control 0;
@@ -587,7 +587,7 @@ snapshot - bedzie regularnie printowane, f 25;
 #X obj -212 -324 noise~;
 #X obj -86 -327 loadbang;
 #X obj 1046 -447 *~;
-#N canvas 735 362 450 300 s_lop 1;
+#N canvas 735 362 450 300 s_lop 0;
 #X obj 191 102 svf~;
 #X obj 191 127 outlet~;
 #X obj 122 48 inlet~;

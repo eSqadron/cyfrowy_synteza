@@ -1,4 +1,4 @@
-#N canvas -8 -8 1936 1040 10;
+#N canvas 0 0 1366 682 10;
 #N canvas 752 154 612 905 generator 0;
 #X obj 12 762 *~ 0;
 #X obj 5 320 osc~;
@@ -31,7 +31,7 @@
 #X floatatom 124 65 5 0 0 0 - - -, f 5;
 #X obj 252 377 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
-#X obj 142 397 dac~;
+#X obj 946 341 dac~;
 #X obj 214 -7 notein;
 #X obj 124 26 mtof;
 #X obj 230 16 / 127;
@@ -287,7 +287,7 @@ snapshot - bedzie regularnie printowane, f 25;
 #000000 #000000 7550 1;
 #X obj 147 114 vradio 15 0 0 3 empty empty off/lin/log 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
-#X floatatom 918 166 5 0 0 0 - - -, f 5;
+#X floatatom 915 164 5 0 10000 0 - - -, f 5;
 #X obj 943 254 osc~;
 #X obj 976 114 osc~;
 #X obj 919 188 sig~;
@@ -298,8 +298,9 @@ snapshot - bedzie regularnie printowane, f 25;
 #X text 863 117 składowa stała częstotliwości nośnej, f 14;
 #X floatatom 977 78 5 1 10000 0 - - -, f 5;
 #X text 956 43 częstotliwość modulatora, f 13;
-#X connect 0 0 3 0;
-#X connect 0 0 3 1;
+#X obj 944 283 *~ 0;
+#X obj 1013 246 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
+#000000 0 1;
 #X connect 1 0 0 0;
 #X connect 2 0 0 4;
 #X connect 4 0 5 0;
@@ -320,9 +321,13 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 18 0 16 1;
 #X connect 19 0 16 0;
 #X connect 20 0 23 0;
+#X connect 21 0 31 0;
 #X connect 22 0 24 0;
 #X connect 23 0 26 0;
 #X connect 24 0 26 1;
 #X connect 25 0 24 1;
 #X connect 26 0 21 0;
 #X connect 29 0 22 0;
+#X connect 31 0 3 1;
+#X connect 31 0 3 0;
+#X connect 32 0 31 1;
