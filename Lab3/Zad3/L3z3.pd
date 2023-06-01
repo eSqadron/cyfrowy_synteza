@@ -1,4 +1,4 @@
-#N canvas 595 9 1085 808 10;
+#N canvas 0 0 1366 682 10;
 #X obj 868 646 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #X obj 85 81 notein;
@@ -7,13 +7,13 @@
 #X obj 578 422 hsl 128 15 0 1 0 1 empty empty Sutain -2 -8 0 10 #fcfcfc
 #000000 #000000 12700 1;
 #X obj 591 449 hsl 128 15 10 2000 0 1 empty empty Attack -2 -8 0 10
-#fcfcfc #000000 #000000 800 1;
+#fcfcfc #000000 #000000 0 1;
 #X obj 605 476 hsl 128 15 10 2000 0 1 empty empty Decay -2 -8 0 10
 #fcfcfc #000000 #000000 800 1;
 #X obj 621 501 hsl 128 15 10 2000 0 1 empty empty Release -2 -8 0 10
 #fcfcfc #000000 #000000 1100 1;
 #X obj 928 408 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 12700 1;
+#000000 #000000 0 1;
 #X obj 896 526 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
 #N canvas 1002 267 780 701 tremollo 0;
@@ -79,7 +79,7 @@
 #X connect 29 0 19 0;
 #X connect 30 0 0 0;
 #X restore 885 554 pd tremollo;
-#N canvas 355 95 924 701 vibrato 0;
+#N canvas 0 0 1366 682 vibrato 0;
 #X obj 175 292 osc~;
 #X floatatom 246 215 5 0 1 0 - - -, f 5;
 #X obj 275 362 +~;
@@ -178,14 +178,14 @@
 #X connect 47 0 5 0;
 #X restore 815 552 pd vibrato;
 #X obj 866 397 vsl 15 128 0 1 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 12700 1;
+#000000 #000000 0 1;
 #X obj 842 405 vsl 15 128 0 30 0 1 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 333 1;
+#000000 #000000 1733 1;
 #X obj 813 378 vradio 15 0 0 3 empty empty off/lin/log 0 -8 0 10 #fcfcfc
 #000000 #000000 0;
 #X obj 806 164 ctlin;
 #X obj 778 403 vsl 15 128 0 1 0 1 empty empty Volume 0 -9 0 10 #fcfcfc
-#000000 #000000 12700 1;
+#000000 #000000 9300 1;
 #N canvas 1328 301 542 544 control 0;
 #X floatatom 65 139 5 0 1 0 - - -, f 5;
 #X floatatom 165 141 5 0 0 0 - - -, f 5;
@@ -211,7 +211,7 @@
 #X connect 13 1 5 0;
 #X connect 13 7 6 0;
 #X restore 796 245 pd control;
-#N canvas 1205 688 450 300 mix_out 1;
+#N canvas 538 252 434 317 mix_out 0;
 #X obj 94 132 dac~;
 #X obj 19 28 inlet~;
 #X obj 83 30 inlet~;
@@ -303,7 +303,7 @@
 #X connect 22 0 21 0;
 #X restore 228 559 pd 5-ADSR;
 #X obj 151 196 poly 5 1;
-#N canvas 804 483 934 369 5-generator 0;
+#N canvas 80 145 934 423 5-generator 0;
 #X obj 28 66 inlet;
 #X obj 84 66 inlet~;
 #X obj 27 189 generator;
@@ -321,7 +321,7 @@
 #X obj 512 191 generator;
 #X obj 637 64 inlet;
 #X text 633 39 volume;
-#X obj 698 67 inlet~;
+#X obj 697 65 inlet~;
 #X obj 757 67 inlet~;
 #X text 759 44 tremolo;
 #X text 693 41 vibrato;
@@ -347,24 +347,24 @@
 #X connect 12 0 14 0;
 #X connect 13 0 14 4;
 #X connect 14 0 27 0;
-#X connect 15 0 5 1;
-#X connect 15 0 14 1;
 #X connect 15 0 2 1;
+#X connect 15 0 14 1;
+#X connect 15 0 5 1;
 #X connect 15 0 8 1;
 #X connect 15 0 11 1;
-#X connect 17 0 5 2;
-#X connect 17 0 14 2;
 #X connect 17 0 2 2;
+#X connect 17 0 14 2;
+#X connect 17 0 5 2;
 #X connect 17 0 8 2;
 #X connect 17 0 11 2;
-#X connect 18 0 5 3;
-#X connect 18 0 14 3;
 #X connect 18 0 2 3;
+#X connect 18 0 14 3;
+#X connect 18 0 5 3;
 #X connect 18 0 11 3;
 #X connect 18 0 8 3;
-#X connect 21 0 5 5;
-#X connect 21 0 14 5;
 #X connect 21 0 2 5;
+#X connect 21 0 14 5;
+#X connect 21 0 5 5;
 #X connect 21 0 11 5;
 #X connect 21 0 8 5;
 #X restore 210 700 pd 5-generator;

@@ -1,4 +1,4 @@
-#N canvas 953 0 974 1031 10;
+#N canvas 0 0 1350 699 10;
 #X obj 102 -470 *~ 0;
 #X obj 172 -480 tgl 15 0 empty empty empty 17 7 0 10 #fcfcfc #000000
 #000000 0 1;
@@ -18,23 +18,23 @@
 #X obj 453 -163 +~;
 #X obj 656 -277 *~ 0;
 #X obj 720 -300 tgl 14 0 empty empty empty 17 7 0 10 #fcfcfc #000000
-#000000 0 1;
+#000000 1 1;
 #X obj 652 -319 *~ 0;
 #X obj 874 -429 vsl 15 101 0 1 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 0 1;
+#000000 #000000 6700 1;
 #X obj 523 -676 notein;
 #X obj 317 -432 phasor~ 440;
 #X obj 649 -395 expr~ $v1 > 0.5;
 #X obj 649 -425 phasor~ 440;
 #X obj 390 -670 vsl 15 101 -12 12 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 5000 1;
+#000000 #000000 0 1;
 #X floatatom 390 -550 5 0 0 0 - - -, f 5;
 #X obj 330 -710 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
 #X obj 330 -680 0;
 #X obj 410 -520 +;
 #X obj 650 -660 vsl 15 101 -12 12 0 0 empty empty empty 0 -9 0 10 #fcfcfc
-#000000 #000000 5000 1;
+#000000 #000000 0 1;
 #X floatatom 652 -548 5 0 0 0 - - -, f 5;
 #X obj 710 -690 bng 15 250 50 0 empty empty empty 17 7 0 10 #fcfcfc
 #000000 #000000;
@@ -223,6 +223,7 @@ snapshot - bedzie regularnie printowane, f 25;
 #fcfcfc #000000 #000000 2700 1;
 #X obj 384 167 *~;
 #X obj 442 205 +~;
+#X obj 832 -647 / 127;
 #X connect 0 0 59 0;
 #X connect 1 0 0 1;
 #X connect 2 0 0 0;
@@ -240,8 +241,7 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 14 0 12 0;
 #X connect 15 0 14 1;
 #X connect 16 0 30 0;
-#X connect 16 1 50 0;
-#X connect 17 0 42 0;
+#X connect 16 1 61 0;
 #X connect 18 0 44 0;
 #X connect 19 0 18 0;
 #X connect 20 0 21 0;
@@ -289,3 +289,4 @@ snapshot - bedzie regularnie printowane, f 25;
 #X connect 59 0 60 0;
 #X connect 60 0 35 0;
 #X connect 60 0 35 1;
+#X connect 61 0 50 0;
