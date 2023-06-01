@@ -1,0 +1,43 @@
+#N canvas 351 333 1575 645 10;
+#N canvas 0 0 450 300 (subpatch) 0;
+#X array array1 165372 float 6 black black;
+#X coords 0 0.5 165372 -0.5 2000 140 1;
+#X restore -6 7 graph;
+#X msg 209 203 read slip_intro.wav array1;
+#X obj 209 228 soundfiler;
+#X floatatom 209 253 13 0 0 0 - - -, f 13;
+#X obj 207 163 bng 15 250 50 1 empty empty load\ and\ play 17 7 0 10
+#fcfcfc #000000 #000000;
+#X msg 227 389 0 \, \$1 \$2;
+#X obj 227 364 pack 1 2;
+#X obj 227 422 line~;
+#X obj 227 472 *~ 0.7;
+#X obj 227 497 dac~;
+#X obj 288 326 / 44.1;
+#X obj 227 447 tabread4~ array1;
+#X obj 399 167 vsl 15 128 0.25 4 0 1 empty empty replay\ speed\ (%)
+0 -9 0 10 #fcfcfc #000000 #000000 12700 1;
+#X floatatom 400 322 5 0 0 0 - - -, f 5;
+#X obj 379 346 /;
+#X obj 375 423 print;
+#X obj 134 231 bng 15 250 50 1 empty empty play 17 7 0 10 #fcfcfc #000000
+#000000;
+#X obj 208 313 trigger f f;
+#X connect 1 0 2 0;
+#X connect 2 0 3 0;
+#X connect 3 0 17 0;
+#X connect 4 0 1 0;
+#X connect 5 0 7 0;
+#X connect 5 0 15 0;
+#X connect 6 0 5 0;
+#X connect 7 0 11 0;
+#X connect 8 0 9 0;
+#X connect 8 0 9 1;
+#X connect 10 0 14 0;
+#X connect 11 0 8 0;
+#X connect 12 0 13 0;
+#X connect 13 0 14 1;
+#X connect 14 0 6 1;
+#X connect 16 0 3 0;
+#X connect 17 0 6 0;
+#X connect 17 1 10 0;
